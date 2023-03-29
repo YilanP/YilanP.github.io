@@ -6,35 +6,45 @@
     <title>Unity WebGL Player | Chess</title>
   </head>
   <body style="text-align: center; padding: 0; border: 0; margin: 0;">
-    <canvas id="unity-canvas" width=960 height=600 style="width: 960px; height: 600px; background: #51A300"></canvas>
-    <script src="Build/TEST.loader.js"></script>
-    <script>
-      if (/iPhone|iPad|iPod|Android/i.test(navigator.userAgent)) {
-        // Mobile device style: fill the whole browser client area with the game canvas:
-        var meta = document.createElement('meta');
-        meta.name = 'viewport';
-        meta.content = 'width=device-width, height=device-height, initial-scale=1.0, user-scalable=no, shrink-to-fit=yes';
-        document.getElementsByTagName('head')[0].appendChild(meta);
+      <style>
+          body {
+              background-image: url('https://i.ibb.co/WtJNMB0/macos-monterey-stock-blue-dark-mode-layers-5k-6016x6016-5895-1.jpg');
+              background-repeat: no-repeat;
+              background-attachment: fixed;
+              background-size: 100% 100%;
+          }
+      </style>
 
-        var canvas = document.querySelector("#unity-canvas");
-        canvas.style.width = "100%";
-        canvas.style.height = "100%";
-        canvas.style.position = "fixed";
 
-        document.body.style.textAlign = "left";
-      }
+          <canvas id="unity-canvas" width=1600 height=900 style="width: 1600px; height: 900px; background: transparent"></canvas>
+          <script src="Build/WebglClean.loader.js"></script>
+          <script>
+              if (/iPhone|iPad|iPod|Android/i.test(navigator.userAgent)) {
+                  // Mobile device style: fill the whole browser client area with the game canvas:
+                  var meta = document.createElement('meta');
+                  meta.name = 'viewport';
+                  meta.content = 'width=device-width, height=device-height, initial-scale=1.0, user-scalable=no, shrink-to-fit=yes';
+                  document.getElementsByTagName('head')[0].appendChild(meta);
 
-      createUnityInstance(document.querySelector("#unity-canvas"), {
-        dataUrl: "Build/TEST.data.br",
-        frameworkUrl: "Build/TEST.framework.js.br",
-        codeUrl: "Build/TEST.wasm.br",
-        streamingAssetsUrl: "StreamingAssets",
-        companyName: "DefaultCompany",
-        productName: "Chess",
-        productVersion: "1.0",
-        // matchWebGLToCanvasSize: false, // Uncomment this to separately control WebGL canvas render size and DOM element size.
-        // devicePixelRatio: 1, // Uncomment this to override low DPI rendering on high DPI displays.
-      });
-    </script>
+                  var canvas = document.querySelector("#unity-canvas");
+                  canvas.style.width = "100%";
+                  canvas.style.height = "100%";
+                  canvas.style.position = "fixed";
+
+                  document.body.style.textAlign = "left";
+              }
+
+              createUnityInstance(document.querySelector("#unity-canvas"), {
+                  dataUrl: "Build/WebglClean.data.unityweb",
+                  frameworkUrl: "Build/WebglClean.framework.js.unityweb",
+                  codeUrl: "Build/WebglClean.wasm.unityweb",
+                  streamingAssetsUrl: "StreamingAssets",
+                  companyName: "DefaultCompany",
+                  productName: "Chess",
+                  productVersion: "1.0",
+                  // matchWebGLToCanvasSize: false, // Uncomment this to separately control WebGL canvas render size and DOM element size.
+                  // devicePixelRatio: 1, // Uncomment this to override low DPI rendering on high DPI displays.
+              });
+          </script>
   </body>
 </html>
