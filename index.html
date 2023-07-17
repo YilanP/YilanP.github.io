@@ -1,149 +1,40 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
-"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>Unity WebGL Player | SChess</title>
+  </head>
+  <body style="text-align: center; padding: 0; border: 0; margin: 0; background-image: url('Capture.PNG'); ">
+      <canvas id="unity-canvas" style="width: 100%; height: 100%; background: transparent;"></canvas>
+      <script src="Build/Webgl.loader.js"></script>
+      <script>
+          if (/iPhone|iPad|iPod|Android/i.test(navigator.userAgent)) {
+              // Mobile device style: fill the whole browser client area with the game canvas:
+              var meta = document.createElement('meta');
+              meta.name = 'viewport';
+              meta.content = 'width=device-width, height=device-height, initial-scale=1.0, user-scalable=no, shrink-to-fit=yes';
+              document.getElementsByTagName('head')[0].appendChild(meta);
 
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+              var canvas = document.querySelector("#unity-canvas");
+              canvas.style.width = "100%";
+              canvas.style.height = "100%";
+              canvas.style.position = "fixed";
 
-<head>
-     <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+              document.body.style.textAlign = "left";
+          }
 
-     <title>Poyraz Yılan - Resume</title>
-
-     <style type="text/css">
-        * { margin: 0; padding: 0; }
-        body { font: 16px Helvetica, Sans-Serif; line-height: 24px; background: url(images/noise.jpg); }
-        .clear { clear: both; }
-        #page-wrap { width: 800px; margin: 40px auto 60px; }
-        #pic { float: right; margin: -30px 0 0 0; }
-        h1 { margin: 0 0 16px 0; padding: 0 0 16px 0; font-size: 42px; font-weight: bold; letter-spacing: -2px; border-bottom: 1px solid #999; }
-        h2 { font-size: 20px; margin: 0 0 6px 0; position: relative; }
-        h2 span { position: absolute; bottom: 0; right: 0; font-style: italic; font-family: Georgia, Serif; font-size: 16px; color: #999; font-weight: normal; }
-        p { margin: 0 0 16px 0; }
-        a { color: #999; text-decoration: none; border-bottom: 1px dotted #999; }
-        a:hover { border-bottom-style: solid; color: black; }
-        ul { margin: 0 0 32px 17px; }
-        #objective { width: 500px; float: left; }
-        #objective p { font-family: Georgia, Serif; font-style: italic; color: #666; }
-        dt { font-style: italic; font-weight: bold; font-size: 18px; text-align: right; padding: 0 26px 0 0; width: 150px; float: left; height: 100px; border-right: 1px solid #999;  }
-        dd { width: 600px; float: right; }
-        dd.clear { float: none; margin: 0; height: 15px; }
-     </style>
-</head>
-
-<body>
-
-    <div id="page-wrap">
-    
-    
-        <div id="contact-info" class="vcard">
-        
-            <!-- Microformats! -->
-        
-            <h1 class="fn">Poyraz Yılan</h1>
-        
-            <p>
-                Email: <a class="email" href="mailto:yilanpoyrazgmail.com">yilanpoyraz@gmail.com</a>
-            </p>
-        </div>
-                
-        <div id="objective">
-            
-        </div>
-        
-        <div class="clear"></div>
-        
-        <dl>
-            <dd class="clear"></dd>
-            
-            <dt>Education</dt>
-            <dd>
-                <h2>Atilim University</h2>
-                <p><strong>BS in:</strong> Computer Engineering<br />
-                   <strong>CGPA:</strong> 4.0/4.0<br>
-                   Expected Graduation: 2023</p>
-            </dd>
-            
-            <dd class="clear"></dd>
-            
-            
-            
-            <dd class="clear"></dd>
-            
-            <dt>Work Experience</dt>
-            <dd>
-			<h2>Atilim University
-                    <span>Student Assistant| 2022 Sep - Currently</span></h2>
-                <ul>
-                    <li>Instructing the lab lectures in two sections of Computer Programming I.</li>
-                </ul> 
-                <h2>LASIGE<span>Trainee| Jul 2022 - Sep 2022</span></h2>
-                <ul>
-                <li>Worked with the FreeST programming language under the supervision of Professor Vasco T. Vasconcelos as part of an Erasmus+ Traineeship program at the Faculty of Sciences of the University of Lisbon.
-                </ul>
-                
-
-                <h2>Undergraduate Research Project:<br>Autofocus Laser Communication System<span>Feb-2022 - Jun-2022</span></h2>
-                <ul>
-                    <li>Part of a research team among other undergraduate students</li>
-                </ul> 
-                <h2>Akbaş Holding A.Ş.<span>IT Intern| Aug-2021 - Sep-2021</span></h2>
-                <ul>
-                    <li>Developed an employee rating system to be used by department heads to create yearly reports for the board of directors. The technologies used for this were: C#, .NET MVC and JavaScript.</li>
-                    <li>Used SAP for basic operations.</li>
-                </ul> 
-                
-
-            </dd>
-            
-            <dd class="clear"></dd>
-            
-            <dt>Projects</dt>
-            <dd>
-                <h2>Turkish Poetry Esolang<span>{C#, ASP.NET}</span></h2>
-                Designed and programmed an original esoteric programming language that has a syntax
-indistinguishable from turkish poetry. This programming language currently supports loops, if
-statements and {+,*,-,%,==,<,>,!=} operators. Functions with recursion are planned to be added in the
-future. This programming language is created in C#. Also, ASP.NET is used to create a website that
-allows users to input their own source code and try it themselves. <br>
-                 <a href="https://github.com/YilanP/PoemPL#readme">https://github.com/YilanP/PoemPL#readme -> Example source code</a>
-
-                 <br>
-                 <br>
-                
-
-                <h2>Console Window Animation Library<span>{C++}</span></h2>
-                Created a library that allows users to easily create images and animation clips with color and place
-them freely on the x and y coordinates of the console window. The placed items can be animated to
-move to other coordinates at dynamic speed while continuing their local animations if they have any.
-multiple items can be created and removed at the same time.
-<br><br>
-
-                <h2>LSB Steganography<span>{Python, NumPy, Pillow}</span></h2>
-                Programmed a tool that uses the least significant bits of the rgb values in pixels of images to hide
-strings. 
-<br><br>
-
-            <dd class="clear"></dd>
-            
-            <dt>Skills</dt>
-            <dd><strong>Programming Languages and Tools: </strong>C++, C, C#, Python, Haskell, SQL, Unity, ASP.NET, SAP, HTML/CSS/JavaScript<br>
-            <strong>Software: </strong>Adobe Premiere Pro / Photoshop / Flash <br>
-            <strong>Languages: </strong>Turkish - Native, English - C1, German - A2
-            <br><br>
-            </dd>
-            <dd class="clear"></dd>
-
-
-            <dt>Interests</dt>
-            <dd><strong>Chess, Animation, Writing, Video Games</strong>
-            
-        </dd>
-            <dd class="clear"></dd>
-        </dl>
-        
-        <div class="clear"></div>
-    
-    </div>
-
-</body>
-
+          createUnityInstance(document.querySelector("#unity-canvas"), {
+              dataUrl: "Build/Webgl.data.unityweb",
+              frameworkUrl: "Build/Webgl.framework.js.unityweb",
+              codeUrl: "Build/Webgl.wasm.unityweb",
+              streamingAssetsUrl: "StreamingAssets",
+              companyName: "PY",
+              productName: "SChess",
+              productVersion: "DevBuild",
+              // matchWebGLToCanvasSize: false, // Uncomment this to separately control WebGL canvas render size and DOM element size.
+              // devicePixelRatio: 1, // Uncomment this to override low DPI rendering on high DPI displays.
+          });
+      </script>
+  </body>
 </html>
