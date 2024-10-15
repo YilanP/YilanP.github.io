@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact - Poyraz Yilan</title>
+    <link rel="stylesheet" href="styles.css">
+    <script>
+        // JavaScript to create a scrape-safe mailto link
+        function createMailto() {
+            var part1 = "poyraz.yilan";
+            var part2 = "@example.com";
+            var email = part1 + part2;
+            var mailtoLink = "mailto:" + email;
+            document.getElementById("email").href = mailtoLink;
+            document.getElementById("email").innerHTML = email;
+        }
+    </script>
+</head>
+<body onload="createMailto()">
+
+<div class="navbar">
+    <a href="index.html">Home</a>
+    <a href="photos.html">Photos</a>
+    <a href="#contact">Contact</a>
+</div>
+
+<div class="main">
+    <h1>Contact Me</h1>
+
+    <p>
+        If you have any questions or want to reach out to me, feel free to send an email to:
+    </p>
+    
+    <p>Email: <a id="email" href="#"></a></p>
+</div>
+
+<!-- Footer Section -->
+<div class="footer">
+    <p>Last updated on 10.10.2024</p>
+</div>
+
+</body>
+</html>

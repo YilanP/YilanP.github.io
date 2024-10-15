@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Photo Gallery</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .gallery {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+        figure {
+            margin: 0;
+            text-align: center;
+        }
+        figure img {
+            max-width: 100%;
+            height: auto;
+            border: 10px solid #FFFFFF; /* White border around images */
+            border-radius: 0px; /* Slight rounding of corners */
+            transition: transform 0.3s ease; /* Smooth hover zoom effect */
+        }
+        figure img:hover {
+            transform: scale(1.05); /* Zoom effect on hover */
+        }
+        figcaption {
+            margin-top: 10px;
+            font-size: 14px;
+            color: #FFFFFF; /* White text for the caption */
+        }
+        a {
+            text-decoration: none; /* Remove underline from links */
+        }
+    </style>
+</head>
+<body>
+
+<div class="navbar">
+    <a href="index.html">Home</a> <!-- Link back to the index.html -->
+    <a href="#gallery">Gallery</a>
+</div>
+
+<div class="main">
+    <h1>Photo Gallery</h1>
+    <p>Welcome to the photo gallery. Here are some of my favorite photos:</p>
+
+    <div class="gallery">
+        <!-- First Photo -->
+        <figure>
+            <a href="/images/Photos/20240619_220051.jpg" target="_blank">
+                <img src="/images/Photos/20240619_220051.jpg" alt="Example Photo 1" width="300">
+            </a>
+            <figcaption>Photo Title 1</figcaption>
+        </figure>
+
+        <figure>
+            <a href="/images/Photos/20240619_220051.jpg" target="_blank">
+                <img src="/images/Photos/20240619_220051.jpg" alt="Example Photo 1" width="300">
+            </a>
+            <figcaption>Photo Title 1</figcaption>
+        </figure>
+        <figure>
+            <a href="/images/Photos/20240619_220051.jpg" target="_blank">
+                <img src="/images/Photos/20240619_220051.jpg" alt="Example Photo 1" width="300">
+            </a>
+            <figcaption>Photo Title 1</figcaption>
+        </figure>
+        <figure>
+            <a href="/images/Photos/20240619_220051.jpg" target="_blank">
+                <img src="/images/Photos/20240619_220051.jpg" alt="Example Photo 1" width="300">
+            </a>
+            <figcaption>Photo Title 1</figcaption>
+        </figure>
+        <figure>
+            <a href="/images/Photos/20240619_220051.jpg" target="_blank">
+                <img src="/images/Photos/20240619_220051.jpg" alt="Example Photo 1" width="300">
+            </a>
+            <figcaption>Photo Title 1</figcaption>
+        </figure>
+        <figure>
+            <a href="/images/Photos/20240619_220051.jpg" target="_blank">
+                <img src="/images/Photos/20240619_220051.jpg" alt="Example Photo 1" width="300">
+            </a>
+            <figcaption>Photo Title 1</figcaption>
+        </figure>
+    </div>
+</div>
+
+</body>
+</html>
