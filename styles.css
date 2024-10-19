@@ -1,18 +1,38 @@
 body { 
+    background-blend-mode: multiply;
+
     font-family: 'Lucida Console', 'Courier New', monospace; 
     font-size: 14pt;
+    
     background: #2c2c2c; /* Slightly lighter dark grey background for better readability */
     color: #e0e0e0; /* Light grey text for better contrast */
     margin: 0;
     padding: 20px;
 }
+p{
+    text-align: justify;
 
+}
 .navbar { 
     background: #1c1c1c; /* Darker grey navbar for better contrast */
     overflow: hidden; 
     padding: 10px 0;
     position: relative;
 }
+.navbar { 
+    background: #1c1c1c; /* Darker grey navbar */
+    padding: 10px 20px;
+    position: fixed; /* Fix to top of screen */
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000; /* Ensure it stays on top of other elements */
+    display: flex;
+    justify-content: left; /* Center the links horizontally */
+    align-items: center; /* Vertically center items */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3); /* Subtle shadow for depth */
+}
+
 .caption {
     color: #666;
     font-size: 14px;
@@ -40,9 +60,7 @@ body {
     margin-bottom: 20px;
 }
 
-.bio .chinese {
-    color: #333; /* Keep Chinese text the same color */
-}
+
 
 /* Footer */
 .footer {
@@ -94,7 +112,7 @@ body {
     padding: 14px 20px; 
     text-decoration: none; 
     font-size: 16px;
-    background: rgba(255,255,255,0.1); /* Light transparent background for better readability */
+    background: rgba(0, 255, 64, 0); /* Light transparent background for better readability */
 }
 
 .navbar a:hover { 

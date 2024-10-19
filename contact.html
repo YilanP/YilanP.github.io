@@ -8,8 +8,8 @@
     <script>
         // JavaScript to create a scrape-safe mailto link
         function createMailto() {
-            var part1 = "poyraz.yilan";
-            var part2 = "@example.com";
+            var part1 = "yilanpoyraz";
+            var part2 = "@gmail.com";
             var email = part1 + part2;
             var mailtoLink = "mailto:" + email;
             document.getElementById("email").href = mailtoLink;
@@ -19,20 +19,21 @@
 </head>
 <body onload="createMailto()">
 
-<div class="navbar">
-    <a href="index.html">Home</a>
-    <a href="photos.html">Photos</a>
-    <a href="#contact">Contact</a>
-</div>
-
+    <div class="navbar">
+        <a href="index.html">Home</a>
+        <!-- <a href="#about">About</a>
+           <a href="photos.html">Photos</a> -->
+        <a href="contact.html">Contact</a>
+    </div>
 <div class="main">
     <h1>Contact Me</h1>
 
     <p>
-        If you have any questions or want to reach out to me, feel free to send an email to:
+        Feel free to reach out to me:
     </p>
     
     <p>Email: <a id="email" href="#"></a></p>
+    <p>Linkedin: <a href="https://www.linkedin.com/in/poyraz-y%C4%B1lan-b59732a7/">Poyraz Yilan</a></p>
 </div>
 
 <!-- Footer Section -->
