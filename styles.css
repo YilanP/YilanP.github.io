@@ -1,173 +1,181 @@
+/* Base Light Mode Styles */
 body { 
-    background-blend-mode: multiply;
-
     font-family: 'Lucida Console', 'Courier New', monospace; 
     font-size: 14pt;
-    
-    background: #2c2c2c; /* Slightly lighter dark grey background for better readability */
-    color: #e0e0e0; /* Light grey text for better contrast */
+    background: #f5f5f5; /* Soft off-white background */
+    color: #333; /* Dark grey text */
     margin: 0;
     padding: 20px;
-}
-p{
+  }
+  
+  p {
     text-align: justify;
-
-}
-.navbar { 
-    background: #1c1c1c; /* Darker grey navbar for better contrast */
-    overflow: hidden; 
-    padding: 10px 0;
-    position: relative;
-}
-.navbar { 
-    background: #1c1c1c; /* Darker grey navbar */
+  }
+  
+  .navbar { 
+    background: #ffffff; /* Light navbar background */
     padding: 10px 20px;
-    position: fixed; /* Fix to top of screen */
+    position: fixed;
     width: 100%;
     top: 0;
     left: 0;
-    z-index: 1000; /* Ensure it stays on top of other elements */
+    z-index: 1000;
     display: flex;
-    justify-content: left; /* Center the links horizontally */
-    align-items: center; /* Vertically center items */
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3); /* Subtle shadow for depth */
-}
-
-.caption {
-    color: #666;
-    font-size: 14px;
-    margin-top: 10px;
-    text-align: center;
-}
-
-.bio {
-    max-width: 800px;
-    margin: 20px auto;
-    text-align: left;
-    font-size: 16px;
-    line-height: 1.6;
-}
-.bio a {
-    color: #007BFF; /* Standard blue link color */
-    text-decoration: none;
-}
-
-.bio a:hover {
-    text-decoration: underline;
-}
-
-.bio p {
-    margin-bottom: 20px;
-}
-
-
-
-/* Footer */
-.footer {
-    margin-top: 40px;
-    text-align: center;
-    font-size: 14px;
-    color: #999;
-}
-
-.footer a {
-    color: #FF4500;
-    text-decoration: none;
-}
-
-.footer a:hover {
-    text-decoration: underline;
-}
-.navbar::after { /* Stripes overlay with better color contrast */
+    justify-content: left;
+    align-items: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  }
+  
+  /* Accent stripes overlay (retained from your original design) */
+  .navbar::after {
     content: '';
     display: block;
     width: 100%;
     height: 4px;
     position: absolute;
-    top: 0%;
+    top: 0;
     left: 0;
     background: repeating-linear-gradient(
         to right,
-        #ff4c4c, /* Slightly lighter red */
+        #ff4c4c,
         #ff4c4c 10%,
-        #ffae42, /* Lighter orange */
+        #ffae42,
         #ffae42 20%,
-        #ffff80, /* Softer yellow */
+        #ffff80,
         #ffff80 30%,
-        #80ff80, /* Softer green */
+        #80ff80,
         #80ff80 40%,
-        #8080ff, /* Softer blue */
+        #8080ff,
         #8080ff 50%,
-        #9370db 50%, /* Lighter indigo */
+        #9370db,
         #9370db 60%
     );
     transform: translateY(-50%);
-}
-
-.navbar a { 
+  }
+  
+  .navbar a { 
     float: left; 
     display: block; 
-    color: #e0e0e0; /* Light grey text for better readability on dark navbar */
+    color: #333; /* Dark text for clear contrast */
     text-align: center; 
     padding: 14px 20px; 
     text-decoration: none; 
     font-size: 16px;
-    background: rgba(0, 255, 64, 0); /* Light transparent background for better readability */
-}
-
-.navbar a:hover { 
-    background-color: #444; /* Medium grey for a better hover effect */
-}
-
-.main {
+  }
+  
+  .navbar a:hover { 
+    background-color: #f0f0f0; /* Gentle hover effect */
+  }
+  
+  /* Style for the toggle button */
+  .navbar button#mode-toggle {
+    background: none;
+    border: none;
+    color: #333;
+    font-size: 16px;
+    padding: 14px 20px;
+    cursor: pointer;
+  }
+  
+  .navbar button#mode-toggle:hover {
+    background-color: #f0f0f0;
+  }
+  
+  .caption {
+    color: #666;
+    font-size: 14px;
+    margin-top: 10px;
+    text-align: center;
+  }
+  
+  .bio {
+    max-width: 800px;
+    margin: 20px auto;
+    text-align: left;
+    font-size: 16px;
+    line-height: 1.6;
+  }
+  
+  .bio a {
+    color: #007BFF; /* Standard blue link color */
+    text-decoration: none;
+  }
+  
+  .bio a:hover {
+    text-decoration: underline;
+  }
+  
+  .bio p {
+    margin-bottom: 20px;
+  }
+  
+  .footer {
+    margin-top: 40px;
+    text-align: center;
+    font-size: 14px;
+    color: #666;
+  }
+  
+  .footer a {
+    color: #FF4500;
+    text-decoration: none;
+  }
+  
+  .footer a:hover {
+    text-decoration: underline;
+  }
+  
+  .main {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center; /* Centers the content horizontally */
+    align-items: center;
     margin-top: 40px;
-}
-.main img {
-    width: 80%; /* Responsive image size, adapts to screen width */
-    max-width: 400px; /* Maximum width for larger screens */
+  }
+  
+  .main img {
+    width: 80%;
+    max-width: 400px;
     height: auto;
     border-radius: 5px;
-    border: 1px  #E0E0E0;
-    transition: transform 0.3s ease; /* Optional hover effect */
-}
-
-.main img:hover {
-    transform: scale(1.05); /* Slight zoom on hover */
-}
-
-h1 {
-    color: #ff6347; /* Tomato color for headings, softer on the eyes */
-}
-
-.download-cv {
+    border: 1px solid #ccc;
+    transition: transform 0.3s ease;
+  }
+  
+  .main img:hover {
+    transform: scale(1.05);
+  }
+  
+  h1 {
+    color: #ff6347; /* Tomato color for headings */
+  }
+  
+  .download-cv {
     display: block;
     width: max-content;
     padding: 10px 20px;
     margin: 20px 0;
-    background: #1c1c1c; /* Dark grey button background for consistency */
-    color: #e0e0e0; /* Light grey text for readability */
+    background: #ffffff;
+    color: #333;
     text-align: center;
     text-decoration: none;
     font-weight: bold;
-    border: 2px solid #e0e0e0; /* Light grey border */
+    border: 2px solid #333;
     border-radius: 5px;
     transition: background-color 0.3s ease, color 0.3s ease;
-}
-
-.download-cv:hover {
-    background-color: #e0e0e0; /* Light grey background on hover */
-    color: #1c1c1c; /* Dark text on hover for readability */
+  }
+  
+  .download-cv:hover {
+    background-color: #333;
+    color: #ffffff;
     cursor: pointer;
-}
-
-@media (max-width: 600px) {
+  }
+  
+  @media (max-width: 600px) {
     .navbar a {
-        float: none;
-        display: block;
-        text-align: left;
+      float: none;
+      display: block;
+      text-align: left;
     }
-}
+  }
+  
